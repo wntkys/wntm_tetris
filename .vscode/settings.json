@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "frag.h": "c",
+        "ostream": "c",
+        "stdbool.h": "c",
+        "fallingshape.h": "c",
+        "math.h": "c",
+        "drawable.h": "c",
+        "gl3w.h": "c"
+    }
+}

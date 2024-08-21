@@ -1,0 +1,2 @@
+-Ideps/cglm-master/include
+-Ideps/gl3w/include
