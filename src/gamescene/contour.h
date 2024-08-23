@@ -1,6 +1,6 @@
 #pragma once
 
-#include "drawable.h"
+#include "../drawable.h"
 
 #include <cglm/cglm.h>
 #include <GL/gl3w.h>

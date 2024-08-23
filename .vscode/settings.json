@@ -6,6 +6,7 @@
         "fallingshape.h": "c",
         "math.h": "c",
         "drawable.h": "c",
-        "gl3w.h": "c"
+        "gl3w.h": "c",
+        "cglm.h": "c"
     }
 }
