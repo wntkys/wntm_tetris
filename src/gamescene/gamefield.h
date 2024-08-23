@@ -3,7 +3,7 @@
 
 #include <GL/gl3w.h>
 
-#include "drawable.h"
+#include "../drawable.h"
 #include "fallingShape.h"
 
 #define GAME_FIELD_WIDTH 12

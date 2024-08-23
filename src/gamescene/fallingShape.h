@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "drawable.h"
+#include "../drawable.h"
 
 typedef struct
 {
