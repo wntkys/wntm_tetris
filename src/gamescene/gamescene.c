@@ -9,6 +9,7 @@
 #include "gamefield.h"
 
 #include "field_shader.h"
+#include <time.h>
 
 typedef struct
 {
@@ -22,6 +23,8 @@ typedef struct
 
 int init(Scene *self)
 {
+    srand(time(NULL));
+
     self->data = (GameSceneData *)malloc(sizeof(GameSceneData));
     GameSceneData *data = (GameSceneData *)self->data;
 
@@ -53,7 +56,8 @@ int init(Scene *self)
 
     FallingShape_generateNew(data->shape);
 
-    data->shape->actualPosition[1] = 10;
+    data->shape->actualPosition[0] = 4;
+    data->shape->actualPosition[1] = 20;
 }
 
 int destroy(Scene *self)
@@ -84,6 +88,9 @@ int update(Scene *self, uint64_t delta)
     GameField_Clear(field);
 
     FallingShape_UpdateVisuals(shape, deltaTime);
+
+    GameField_updateVisuals(field, deltaTime);
+
     bool fallen = FallingShape_fallUpdate(shape, deltaTime);
 
     bool hit = GameField_TryPlace(field, shape);
@@ -92,8 +99,8 @@ int update(Scene *self, uint64_t delta)
     {
         FallingShape_fallBack(shape);
         GameField_Place(field, shape);
-        shape->actualPosition[0] = 0;
-        shape->actualPosition[1] = 10;
+        shape->actualPosition[0] = 4;
+        shape->actualPosition[1] = 20;
         FallingShape_generateNew(shape);
 
         FallingShape_UpdateVisuals(shape, 100);

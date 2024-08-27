@@ -37,8 +37,6 @@ int main(int argc, char **argv)
 
 	scene->init(scene);
 
-	// GLuint dbgShader = loadShaderProgram(shader_vert, selDbg_frag);
-
 	uint64_t oldTime = SDL_GetTicks();
 
 	bool running = true;

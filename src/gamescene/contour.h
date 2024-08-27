@@ -15,6 +15,7 @@ typedef struct
     uint8_t flags;
 } ContourVertex;
 
-ContourDrawable _loadContourDrawable(float const *verts, uint32_t verts_len, uint32_t const *indices, uint32_t indices_len);
+ContourDrawable
+_loadContourDrawable(float const *verts, uint32_t verts_len, uint32_t const *indices, uint32_t indices_len);
 
 void ContourDrawable_get(ContourDrawable *self);

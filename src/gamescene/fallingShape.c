@@ -15,7 +15,7 @@ void FallingShape_generateNew(FallingShape *shape)
 {
     int a = rand() % 5;
     shape->actualRotation = 0;
-    shape->hue = rand() / (float)RAND_MAX * 2 * M_PI;
+    shape->hue = (rand() / (float)RAND_MAX) * 2 * M_PI;
 
     if (a == 0)
     {
