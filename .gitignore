@@ -2,3 +2,4 @@
 bin
 bin/*
 deps/SDL-main/build
+build/
